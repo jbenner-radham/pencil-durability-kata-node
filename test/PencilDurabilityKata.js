@@ -19,5 +19,11 @@ describe('PencilDurabilityKata', function () {
             this.kata.write(text);
             expect(this.kata.paper).to.equal(text);
         });
+
+        it('should append text to the paper', function () {
+            this.kata.write('She sells sea shells');
+            this.kata.write(' down by the sea shore');
+            expect(this.kata.paper).to.equal('She sells sea shells down by the sea shore');
+        });
     });
 });
