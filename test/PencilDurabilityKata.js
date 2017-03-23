@@ -12,5 +12,12 @@ describe('PencilDurabilityKata', function () {
         it('initializes with a blank paper', function () {
             expect(this.kata.paper).to.equal('');
         });
+
+        it('writes to paper', function () {
+            let text = 'Hello world!';
+
+            this.kata.write(text);
+            expect(this.kata.paper).to.equal(text);
+        });
     });
 });
