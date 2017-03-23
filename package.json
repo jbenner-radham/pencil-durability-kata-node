@@ -1,0 +1,32 @@
+{
+  "name": "pencil-durability-kata-node",
+  "version": "0.0.0",
+  "description": "Kata to simulate wearing down an ordinary pencil writing letters.",
+  "engines": {
+    "node": ">=6.10.0"
+  },
+  "private": true,
+  "scripts": {
+    "lint:js": "eslint {lib,test}/*.js",
+    "test": "npm run-script lint:js && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbenner-radham/pencil-durability-kata-node.git"
+  },
+  "keywords": [
+    "code-kata",
+    "kata"
+  ],
+  "author": "James Benner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbenner-radham/pencil-durability-kata-node/issues"
+  },
+  "homepage": "https://github.com/jbenner-radham/pencil-durability-kata-node#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.18.0",
+    "mocha": "^3.2.0"
+  }
+}
