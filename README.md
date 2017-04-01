@@ -7,6 +7,26 @@ Pencil Durability Kata
 
 The purpose of the Pencil Kata is to write code to simulate, first coarsely and then more faithfully, an ordinary graphite pencil. It includes writing and editing text, point degradation, using the eraser, and sharpening the pencil. The point of this kata to to provide a larger than trivial exercise that can be used to practice TDD. A significant portion of the effort will be in determining what tests should be written and, more importantly, written next.
 
+Requirements
+------------
+[Node.js](https://nodejs.org/) 6.10.0 LTS or higher.
+
+Install
+-------
+From a console in the root of the project directory enter the following.
+
+```sh
+$ npm install # Or `yarn install` if you have Yarn installed.
+```
+
+Testing
+-------
+From a console in the root of the project directory enter the following.
+
+```sh
+$ npm test # Or `yarn test` if you have Yarn installed.
+```
+
 Features
 --------
 ### Write
@@ -29,7 +49,6 @@ Writing spaces and newlines expends no graphite; therefore these characters shou
 
 Lowercase letters should degrade the pencil point by a value of one, and capital letters should degrade the point by two.  Hence when a pencil with a point durability of four is instructed to write the string "text", the paper will contain the entire string.  But if a pencil with point durability of four is instructed to write the string "Text", the paper will only show "Tex&nbsp;".
 
-
 ### Sharpen
 *As a writer  
 I want to be able to sharpen my pencil  
@@ -37,8 +56,7 @@ so that I can continue to write with it after it goes dull*
 
 When a pencil is sharpened, it regains its initial point durability and can write more characters before it goes dull again.  Thus, given a pencil created with point durability of 40,000 that has since degraded, when it is sharpened, its point durability will be 40,000 again.
 
-A pencil should also be created with an initial length value. Pencils of short length will only be sharpenable a small number of times while pencils of great length can be sharpened more times.  The pencil's length is reduced by one each time it is sharpened.  When a pencil's length is zero, then sharpening it no longer restores its point durabliity.
-
+A pencil should also be created with an initial length value. Pencils of short length will only be sharpenable a small number of times while pencils of great length can be sharpened more times.  The pencil's length is reduced by one each time it is sharpened.  When a pencil's length is zero, then sharpening it no longer restores its point durability.
 
 ### Erase
 *As a writer  
@@ -54,7 +72,6 @@ when the string "chuck" is erased, the paper should read:
 and if the string "chuck" is erased again, the paper should read:  
 "How much wood would a woodchuck chuck if a wood&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;could&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wood?"  
 
-
 ### Eraser Degradation
 *As a pencil manufacturer  
 I want a pencil eraser to eventually wear out  
@@ -63,7 +80,6 @@ so that I can sell more pencils*
 When a pencil is created, it can be provided with a value for eraser durability.  For simplicity, all characters except for white space should degrade the eraser by a value of one.  Text should be erased in the opposite order it was written.  Once the eraser durability is zero, the eraser is worn out and can no longer erase.
 
 Thus if a pencil's eraser has remaining durability of three, and it is instructed to erase the word "Bill" from "Buffalo Bill", then the text remaining on the paper is "Buffalo B&nbsp;&nbsp;&nbsp;".
-
 
 ### Editing
 *As a writer  
