@@ -128,5 +128,15 @@ describe('PencilDurabilityKata', function () {
 
             expect(pencil.eraserDurability).to.equal(eraserDurability);
         });
+
+        it('erases "ill" from a paper when erasing "Bill" with an eraser durability of 3', function () {
+            let pointDurability = 55;
+            let eraserDurability = 3;
+            let pencil = new Pencil(pointDurability, eraserDurability);
+            let erasureText = 'Bill';
+            let paper = 'Buffalo Bill';
+
+            expect(pencil.erase(paper, erasureText)).to.equal('Buffalo B   ');
+        });
     });
 });
