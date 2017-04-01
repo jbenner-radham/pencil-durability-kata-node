@@ -118,4 +118,14 @@ describe('PencilDurabilityKata', function () {
             expect(pencil.erase(paper, erasureText)).to.equal('Hello      !');
         });
     });
+
+    describe('Eraser Degradation', function () {
+        it('initializes a pencil with eraser durability', function () {
+            let eraserDurability = 9001;
+            let pointDurability = 9001;
+            let pencil = new Pencil(pointDurability, eraserDurability);
+
+            expect(pencil.eraserDurability).to.equal(eraserDurability);
+        });
+    });
 });
