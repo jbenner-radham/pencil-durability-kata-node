@@ -87,5 +87,13 @@ describe('PencilDurabilityKata', function () {
         it('should create a pencil with an initial length value', function () {
             expect(new Pencil(5).length).to.be.a('number');
         });
+
+        it('reduces the length of the pencil by one each time it is sharpened', function () {
+            let pencil = new Pencil(5);
+            let initialLength = pencil.length;
+
+            pencil.sharpen();
+            expect(pencil.length).to.equal(initialLength - 1);
+        });
     });
 });
