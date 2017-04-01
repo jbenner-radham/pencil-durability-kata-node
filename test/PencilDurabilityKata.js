@@ -29,5 +29,9 @@ describe('PencilDurabilityKata', function () {
 
             expect(pencil.pointDurability).to.equal(pointDurability);
         });
+
+        it('expends no point durability writing spaces', function () {
+            expect(Pencil.degradation(' ')).to.equal(0);
+        });
     });
 });
