@@ -139,4 +139,16 @@ describe('PencilDurabilityKata', function () {
             expect(pencil.erase(paper, erasureText)).to.equal('Buffalo B   ');
         });
     });
+
+    describe('Editing', function () {
+        it('writes new text over erased whitespace', function () {
+            let pencil = new Pencil(500);
+            let paper = 'An       a day keeps the doctor away';
+            let addendum = 'onion';
+            let index = 3;
+            let expected = 'An onion a day keeps the doctor away';
+
+            expect(pencil.edit(paper, addendum, index)).to.equal(expected);
+        });
+    });
 });
