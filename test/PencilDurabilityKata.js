@@ -112,10 +112,11 @@ describe('PencilDurabilityKata', function () {
     describe('Erase', function () {
         it('erases the last occurrence of the provided text on the paper', function () {
             let pencil = new Pencil(55);
-            let erasureText = 'world';
-            let paper = 'Hello world!';
+            let erasureText = 'chuck';
+            let paper = 'How much wood would a woodchuck chuck if a woodchuck could chuck wood?';
+            let expected = 'How much wood would a woodchuck chuck if a woodchuck could       wood?'
 
-            expect(pencil.erase(paper, erasureText)).to.equal('Hello      !');
+            expect(pencil.erase(paper, erasureText)).to.equal(expected);
         });
     });
 
