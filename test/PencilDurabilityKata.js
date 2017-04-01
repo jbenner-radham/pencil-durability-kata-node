@@ -75,5 +75,13 @@ describe('PencilDurabilityKata', function () {
 
             expect(pencil.initialPointDurability).to.equal(durability);
         });
+
+        it('regains its initial point durability when the pencil is sharpened', function () {
+            let durability = 55;
+            let pencil = new Pencil(durability);
+
+            pencil.write('Hello world!');
+            expect(pencil.sharpen()).to.equal(durability);
+        });
     });
 });
