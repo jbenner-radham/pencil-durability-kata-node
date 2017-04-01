@@ -1,6 +1,6 @@
 {
   "name": "pencil-durability-kata-node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Kata to simulate wearing down an ordinary pencil writing letters.",
   "engines": {
     "node": ">=6.10.0"
