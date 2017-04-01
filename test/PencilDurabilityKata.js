@@ -67,4 +67,13 @@ describe('PencilDurabilityKata', function () {
             expect(pencil.write(text)).to.equal("Tex \n");
         });
     });
+
+    describe('Sharpen', function () {
+        it('remembers the initial point durability the pencil was initialized with', function () {
+            let durability = 9001;
+            let pencil = new Pencil(durability);
+
+            expect(pencil.initialPointDurability).to.equal(durability);
+        });
+    });
 });
