@@ -150,5 +150,15 @@ describe('PencilDurabilityKata', function () {
 
             expect(pencil.edit(paper, addendum, index)).to.equal(expected);
         });
+
+        it('writes edits onto paper and marks character collisions with an "@"', function () {
+            let pencil = new Pencil(500);
+            let paper = 'An       a day keeps the doctor away';
+            let addendum = 'artichoke';
+            let index = 3;
+            let expected = 'An artich@k@ay keeps the doctor away';
+
+            expect(pencil.edit(paper, addendum, index)).to.equal(expected);
+        });
     });
 });
