@@ -37,5 +37,9 @@ describe('PencilDurabilityKata', function () {
         it('expends no point durability writing newlines', function () {
             expect(Pencil.degradation('\n')).to.equal(0);
         });
+
+        it('expends one point of durability writing a lowercase character', function () {
+            expect(Pencil.degradation('a')).to.equal(1);
+        });
     });
 });
