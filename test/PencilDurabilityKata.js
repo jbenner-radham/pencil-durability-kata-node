@@ -45,5 +45,12 @@ describe('PencilDurabilityKata', function () {
         it('expends two points of durability writing an uppercase character', function () {
             expect(Pencil.degradation('A')).to.equal(2);
         });
+
+        it('writes "text" to a paper with a point durability of 4', function () {
+            let pencil = new Pencil(4);
+            let text = 'text';
+
+            expect(pencil.write(text)).to.equal(text);
+        });
     });
 });
