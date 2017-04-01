@@ -95,5 +95,17 @@ describe('PencilDurabilityKata', function () {
             pencil.sharpen();
             expect(pencil.length).to.equal(initialLength - 1);
         });
+
+        it('no longer sharpens the pencil when it\'s length is depleted', function () {
+            let pencil = new Pencil(4);
+
+            do {
+                pencil.sharpen();
+            } while (pencil.length > 0)
+
+            pencil.write('text');
+            pencil.sharpen();
+            expect(pencil.pointDurability).to.equal(0);
+        });
     });
 });
