@@ -108,4 +108,14 @@ describe('PencilDurabilityKata', function () {
             expect(pencil.pointDurability).to.equal(0);
         });
     });
+
+    describe('Erase', function () {
+        it('erases the last occurrence of the provided text on the paper', function () {
+            let pencil = new Pencil(55);
+            let erasureText = 'world';
+            let paper = 'Hello world!';
+
+            expect(pencil.erase(paper, erasureText)).to.equal('Hello      !');
+        });
+    });
 });
