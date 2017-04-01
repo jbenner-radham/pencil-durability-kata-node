@@ -101,7 +101,7 @@ describe('PencilDurabilityKata', function () {
 
             do {
                 pencil.sharpen();
-            } while (pencil.length > 0)
+            } while (pencil.length > 0);
 
             pencil.write('text');
             pencil.sharpen();
