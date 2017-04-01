@@ -83,5 +83,9 @@ describe('PencilDurabilityKata', function () {
             pencil.write('Hello world!');
             expect(pencil.sharpen()).to.equal(durability);
         });
+
+        it('should create a pencil with an initial length value', function () {
+            expect(new Pencil(5).length).to.be.a('number');
+        });
     });
 });
