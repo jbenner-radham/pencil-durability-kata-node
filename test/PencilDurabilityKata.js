@@ -59,5 +59,12 @@ describe('PencilDurabilityKata', function () {
 
             expect(pencil.write(text)).to.equal("Tex ");
         });
+
+        it('writes "Tex \\n" from "Text\\n" to a paper with a point durability of 4', function () {
+            let pencil = new Pencil(4);
+            let text = 'Text\n';
+
+            expect(pencil.write(text)).to.equal("Tex \n");
+        });
     });
 });
